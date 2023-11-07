@@ -8,4 +8,7 @@
         <item>OT</item>
         <item>TH</item>
     </string-array>
+    <string name="notification_channel_name">notification_channel</string>]
+    <string name="msg_notification_title_finish">警告</string>
+    <string name="msg_notification_text_finish">テキスト</string>
 </resources>
