@@ -31,5 +31,16 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        //Intentから通知のタップからの引き続きデータを取得
+        val fromNotification =　intent.getBooleanExtra("fromNotification", false)
+        //引き続きデータが存在、つまり通知のタップからならば...
+        if(fromNotification){
+        //再生ボタンをタップ不可に、停止ボタンをタップ可に変更
+            val btPlay = findViewById<Button>(R.id.btPlay)
+            val btStop = findViewById<Button>(R.id.btStop)
+            btPlay.isEnabled = false
+            btStop.isEnabled = true
+        }
+
     }
 }
